@@ -19,12 +19,13 @@ Console.WriteLine($"Результатом будет -> {result}"); */
 int number = new Random().Next(100, 1000);
 Console.WriteLine($"Случайное число из отрезка 100 - 999 -> {number}");
 
-int sumDigit = SumDigit(number);
-int SumDigit(int num)
+int delSecond = DelSecond(number);
+Console.WriteLine($"Результатом будет -> {delSecond}");
+int DelSecond(int num)
 {
     int firstDigit = num / 100;
     int lastDigit = num % 10;
     int sumD = firstDigit * 10 + lastDigit;
     return sumD;
 }
-Console.WriteLine($"Результатом будет -> {sumDigit}");
+
