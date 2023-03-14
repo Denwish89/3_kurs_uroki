@@ -33,10 +33,11 @@ int result = Result(number1, number2);
 
 if (result == 0)
 {
-Console.WriteLine("кратно");
+    Console.WriteLine("кратно");
 }
-else{
-Console.WriteLine($"не кратно, остаток {result}");
+else
+{
+    Console.WriteLine($"не кратно, остаток {result}");
 }
 
 
