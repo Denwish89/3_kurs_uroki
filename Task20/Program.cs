@@ -3,18 +3,20 @@
 // A (3,6); B (2,1) -> 5,09
 // A (7,-5); B (1,-1) -> 7,21
 
-Console.Write("Введите координату первой точки x: ");
+Console.WriteLine("Введите координаты двух точек A и B");
+
+Console.Write("X координата точки A: ");
 int xCoordinate1 = Convert.ToInt32(Console.ReadLine());
-Console.Write("Введите координату первой точки y: ");
+Console.Write("Y координата точки A: ");
 int yCoordinate1 = Convert.ToInt32(Console.ReadLine());
 
-Console.Write("Введите координату второй точки x: ");
+Console.Write("X координата точки B: ");
 int xCoordinate2 = Convert.ToInt32(Console.ReadLine());
-Console.Write("Введите координату второй точки y: ");
+Console.Write("Y координата точки B: ");
 int yCoordinate2 = Convert.ToInt32(Console.ReadLine());
 
 double coordinate = lenght(xCoordinate1, yCoordinate1, xCoordinate2, yCoordinate2);
-Console.WriteLine(coordinate);
+Console.WriteLine($"Расстояние между точками A и B: {coordinate}");
 
 double lenght(int x1, int y1, int x2, int y2)
 {
