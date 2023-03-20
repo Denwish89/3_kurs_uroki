@@ -8,15 +8,18 @@
 Console.Write("Введите натуральное число: ");
 int number = Convert.ToInt32(Console.ReadLine());
 
-int sqNumber = SqNumber(number);
-Console.WriteLine($"Произведение чисел от 1 до {number} -> {sqNumber}");
+double factorial = Factorial(number);
+Console.WriteLine($"Произведение чисел от 1 до {number} -> {factorial}");
 
-int SqNumber(int num)
+double Factorial(int num)
 {
     int sqNum = 1;
     for(int i = 1; i <= num; i++)
     {
-        sqNum = i * sqNum;
+        checked
+        {
+        sqNum *= i;
+        }
     }
     return sqNum;
 }
