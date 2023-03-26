@@ -13,7 +13,7 @@
 // 3; массив [6, 7, 19, 345, 3] -> да 
 
 
-int[] array = CreateArrayRndInt(12, -150, 150); //Вызываваем метод создающий массив
+int[] array = CreateArrayRndInt(123, -150, 150); //Вызываваем метод создающий массив
 PrintArray(array); //Вызываваем метод вывода в консоль
 int arraySearch = ArraySearch(array);
 Console.WriteLine($"Количество двузначных элементов массива: {arraySearch}");
