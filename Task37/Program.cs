@@ -4,25 +4,10 @@
 // [1 2 3 4 5] -> 5 8 3
 // [6 7 3 6] -> 36 21
 
-// Задача 35: Задайте одномерный массив из 123 случайных чисел.
-// Найдите количество элементов массива, значения которых лежат в
-// отрезке [10,99].
-// Пример для массива из 5, а не 123 элементов. В своём решении сделайте для
-// 123
-// [5, 18, 123, 6, 2] -> 1
-// [1, 2, 3, 6, 2] -> 0
-// [10, 11, 12, 13, 14] -> 5
-
-// Задача 33: Задайте массив. Напишите программу, которая
-// определяет, присутствует ли заданное число в массиве.
-// 4; массив [6, 7, 19, 345, 3] -> нет
-// 3; массив [6, 7, 19, 345, 3] -> да 
-
-
-int[] array = CreateArrayRndInt(12, -150, 150); //Вызываваем метод создающий массив
+int[] array = CreateArrayRndInt(5, 0, 10); //Вызываваем метод создающий массив
 PrintArray(array); //Вызываваем метод вывода в консоль
-int arraySearch = ArraySearch(array);
-Console.WriteLine($"Количество двузначных элементов массива: {arraySearch}");
+int[] newArray = Multiple(array);
+PrintArray(newArray); //Вызываваем метод вывода в консоль
 
 int[] CreateArrayRndInt(int size, int min, int max) // метод создающий массив
 {
@@ -45,12 +30,19 @@ void PrintArray(int[] arrayValue)
     }
 }
 
-int ArraySearch(int[] arrayValue)
+int[] Multiple(int[] arr)
 {
-    int count = 0;
-    for(int i = 0; i < array.Length; i++)
+    int size = arr.Length / 2;
+    if (arr.Length % 2 != 0) size += 1;
+    int[] newArr = new int[size];
+
+    for (int i = 0; i < size; i++)
     {
-        if(array[i] > 10 && array[i] < 99) count++;
-    } 
-    return count;
+        newArr[i] = arr[i] * arr[arr.Length - i - 1];
+    }
+    if (arr.Length % 2 != 0)
+    {
+        newArr[size - 1] = arr[arr.Length / 2];
+    }
+    return newArr;
 }
