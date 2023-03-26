@@ -5,7 +5,6 @@
 // 2. Вывести массив
 
 int[] array = new int[8]; // формируем массив из 8 элементов (по умолчанию в пустом массиве числятся нули)
-Random rand = new Random();
 
 Array(array);
 WriteArray(array);
