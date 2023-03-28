@@ -13,7 +13,7 @@ string BinareCode(int num)
     string result = string.Empty;
     while(num > 0)
     {
-        result += num % 2;
+        result = num % 2 + result;
         num /= 2;
     }
     return result;
